@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>LR 5</title>
-  </head>
-  <body>
-    <div id="root">
-      <form name="main">
-        <label class="main-form__input">Парсинг страницы</label>
-        <input tabindex="2" size="35" id="input_1" type="text" name="nameInput" class="main-form__input" placeholder="Введите что-то..." autocomplete="off">
-        <button type="button" class="button">Парсить!</button>
-      </form>
-    </div>
-    <script src="parse.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парсер страницы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input {
+            width: 300px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Парсер страницы</h1>
+<label for="urlInput">URL страницы:</label>
+<input type="text" id="urlInput" placeholder="Введите URL страницы">
+<button onclick="fetchAndDisplay()">Парсить</button>
+<div id="result"></div>
+
+<script src="script.js"></script>
+</body>
 </html>
